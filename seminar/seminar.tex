@@ -1,9 +1,11 @@
-\documentclass[aspectratio=1610, polish]{beamer} 
+\documentclass[aspectratio=1610, english]{beamer} 
 \usepackage{babel}
 \makeatletter
 \@ifclasswith{beamer}{polish}{
 	\usepackage{polski}
 }
+
+\graphicspath{{static/}} 
 \makeatother
 \usepackage[utf8x]{inputenc}
 
@@ -29,7 +31,7 @@
 \AtBeginPart{ % At begin part: display its name
 	\frame{\partpage}
 } 
-\author[Aleksandra Poręba]{Aleksandra Poręba}
+\author[Aleksandra Poreba]{Aleksandra Poreba}
 \date{}
 
 	\title{HZZ Analysis}
@@ -47,6 +49,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Physics motivation}
 
+\begin{frame}
+\frametitle{The Feynman diagram}
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=8cm]{feynman_diagram.png}
+\caption{Feynman diagram for H→ZZ∗→4ℓ decay \cite{diagram}. }
+\end{figure}
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Expected number of events}
 
@@ -59,6 +72,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Control plots}
 
+\begin{frame}
+\frametitle{Number of Leptons}
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=6cm]{hist_n_lept.png}
+\caption{The histogram with number of leptons. }
+\end{figure}
+
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Ideas for possible measurements}
 
@@ -69,9 +93,11 @@
 	\begin{thebibliography}{9}
 		\setbeamertemplate{bibliography item}[article]
 		\bibitem{opendata}
-			{ The ATLAS collaboration\newblock Review of the 13 TeV ATLAS Open Data release \newblock \url{https://cds.cern.ch/record/2707171}}
+			{The ATLAS collaboration\newblock Review of the 13 TeV ATLAS Open Data release \newblock \url{https://cds.cern.ch/record/2707171}}
 		\bibitem{hzz}
 			{Aaboud, Morad and others \newblock Measurement of inclusive and differential cross sections in the H→ZZ∗→4ℓ decay channel in pp collisions at s√ = 13 TeV with the ATLAS detector \newblock \url{http://dx.doi.org/10.1007/JHEP10(2017)132}}
+		\bibitem{diagram}
+			{Passon, Oliver \newblock On the interpretation of Feynman diagrams, or, did the LHC experiments observe the Higgs to gamma gamma decay?}
 	\end{thebibliography}
 \end{frame}
 \end{document}
