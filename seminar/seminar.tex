@@ -8,7 +8,7 @@
 \graphicspath{{static/}} 
 \makeatother
 \usepackage[utf8x]{inputenc}
-
+\usepackage{physics}
 \mode<beamer>{ 	% In the 'beamer' mode
 	\hypersetup{pdfpagemode=FullScreen}         % Enable Full screen mode
 	\usetheme[parttitle=rightfooter]{AGH}       % Show part title in right footer
@@ -55,7 +55,8 @@ The physics motivation for the measurement:
 \begin{itemize}
 \item a good test for the SM,
 \item a measurement of inclusive and differential fiducial cross sections,
-\item
+\item tests of the spin and parity of the Higgs boson,
+\item test of perturbative QCD calculations.
 \end{itemize}
 
 \end{frame}
@@ -76,9 +77,19 @@ The physics motivation for the measurement:
 
 \begin{frame}
 \frametitle{Expected number of events}
+Expected number of events equals:
+\begin{equation}
+N^{H\rightarrow ZZ^{*}\rightarrow 4l}=\sigma^{H\rightarrow ZZ^{*}\rightarrow 4l}_{incl}} \cdot L_{int},
+\end{equation}
+where:
+\begin{description}
+\item[$\sigma^{H\rightarrow ZZ^{*}\rightarrow 4l}_{incl}$] = 3,62 $fb^{-1}$,
+\item[$L_{int}$] = 10,06 $fb^{-1}$.
+\end{description}
+\begin{equation}
+N^{H\rightarrow ZZ^{*}\rightarrow 4l}=3,62 \: \mathrm{fb} \cdot 10,06 \: \mathrm{fb}^{-1} = 36,42.
+\end{equation}
 
-
-\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Event selection}
