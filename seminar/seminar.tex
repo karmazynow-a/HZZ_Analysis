@@ -9,6 +9,9 @@
 \makeatother
 \usepackage[utf8x]{inputenc}
 \usepackage{physics}
+
+\newcommand{\hzz}{ H\rightarrow ZZ^{*}\rightarrow 4 \ell}
+
 \mode<beamer>{ 	% In the 'beamer' mode
 	\hypersetup{pdfpagemode=FullScreen}         % Enable Full screen mode
 	\usetheme[parttitle=rightfooter]{AGH}       % Show part title in right footer
@@ -31,10 +34,10 @@
 \AtBeginPart{ % At begin part: display its name
 	\frame{\partpage}
 } 
-\author[Aleksandra Poreba]{Aleksandra Poreba}
+\author[Aleksandra Poreba, Aleksandra Kukielka]{Aleksandra Poreba, Aleksandra Kukielka}
 \date{}
 
-	\title{HZZ Analysis}
+	\title[The $H \rightarrow ZZ^{*}$ decay analysis]{The case of Higgs boson production in $H \rightarrow ZZ^{*}$ decay}
 	\subtitle{Introduction to the Particle Physics Data Analysis}
 
 %%%%%%%%%%%%%%%%%
@@ -67,7 +70,7 @@ The physics motivation for the measurement:
 \begin{figure} [H]
 \centering
 \includegraphics[width=8cm]{feynman_diagram.png}
-\caption{Feynman diagram for H→ZZ∗→4ℓ decay \cite{diagram}. }
+\caption{Feynman diagram for $\hzz$ decay \cite{diagram}. }
 \end{figure}
 
 \end{frame}
@@ -79,18 +82,19 @@ The physics motivation for the measurement:
 \frametitle{Expected number of events}
 Expected number of events equals:
 \begin{equation}
-N^{H\rightarrow ZZ^{*}\rightarrow 4l}=\sigma^{H\rightarrow ZZ^{*}\rightarrow 4l}_{incl}} \cdot L_{int},
+N^{ \hzz }=\sigma^{ \hzz }_{incl} \cdot L_{int},
 \end{equation}
 where:
 \begin{description}
-\item[$\sigma^{H\rightarrow ZZ^{*}\rightarrow 4l}_{incl}$] = 3,62 $fb^{-1}$,
+\item[$\sigma^{ \hzz }_{incl}$] = 3,62 $fb^{-1}$,
 \item[$L_{int}$] = 10,06 $fb^{-1}$.
 \end{description}
+\vspace{1cm}
 \begin{equation}
-N^{H\rightarrow ZZ^{*}\rightarrow 4l}=3,62 \: \mathrm{fb} \cdot 10,06 \: \mathrm{fb}^{-1} = 36,42.
+N^{ \hzz }=3,62 \: \mathrm{fb} \cdot 10,06 \: \mathrm{fb}^{-1} = 36,42.
 \end{equation}
 
-
+\end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Event selection}
 
@@ -123,7 +127,7 @@ N^{H\rightarrow ZZ^{*}\rightarrow 4l}=3,62 \: \mathrm{fb} \cdot 10,06 \: \mathrm
 		\bibitem{opendata}
 			{The ATLAS collaboration\newblock Review of the 13 TeV ATLAS Open Data release \newblock \url{https://cds.cern.ch/record/2707171}}
 		\bibitem{hzz}
-			{Aaboud, Morad and others \newblock Measurement of inclusive and differential cross sections in the H→ZZ∗→4ℓ decay channel in pp collisions at s√ = 13 TeV with the ATLAS detector \newblock \url{http://dx.doi.org/10.1007/JHEP10(2017)132}}
+			{Aaboud, Morad and others \newblock Measurement of inclusive and differential cross sections in the $ \hzz $ decay channel in pp collisions at $s√ = 13 TeV$ with the ATLAS detector \newblock \url{http://dx.doi.org/10.1007/JHEP10(2017)132}}
 		\bibitem{diagram}
 			{Passon, Oliver \newblock On the interpretation of Feynman diagrams, or, did the LHC experiments observe the Higgs to gamma gamma decay?}
 	\end{thebibliography}
