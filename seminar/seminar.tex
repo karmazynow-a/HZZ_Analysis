@@ -9,6 +9,7 @@
 \makeatother
 \usepackage[utf8x]{inputenc}
 \usepackage{physics}
+\usepackage{eqnarray}
 
 \newcommand{\hzz}{ H\rightarrow ZZ^{*}\rightarrow 4 \ell}
 
@@ -50,7 +51,7 @@
 \begin{figure} [H]
 \centering
 \includegraphics[width=3cm]{zdj1.png}
-%\includegraphics[width=3cm]{zdj2.png}
+\includegraphics[width=3cm]{zdj2.png}
 \end{figure}
 
 \end{frame}
@@ -69,7 +70,6 @@ The physics motivation for the measurement:
 \begin{itemize}
 \item a good test for the SM,
 \item a measurement of inclusive and differential fiducial cross sections,
-\item tests of the spin and parity of the Higgs boson,
 \item test of perturbative QCD calculations.
 \end{itemize}
 
@@ -135,7 +135,7 @@ The final event-selection criteria for $ZZ^*$ production:
 \frametitle{Expected number of events}
 Expected number of events equals:
 \begin{equation}
-N^{ \hzz }=\sigma^{ \hzz }_{incl} \cdot L_{int},
+N^{ \hzz }_{exp}=\sigma^{ \hzz }_{incl} \cdot L_{int},
 \end{equation}
 where:
 \begin{description}
@@ -144,7 +144,7 @@ where:
 \end{description}
 \vspace{1cm}
 \begin{equation}
-N^{ \hzz }=3,62 \: \mathrm{fb} \cdot 10,06 \: \mathrm{fb}^{-1} = 36,42.
+N^{\hzz}_{exp}=3.62 \: \mathrm{fb} \cdot 10.06 \: \mathrm{fb}^{-1} = 36.42.
 \end{equation}
 
 \end{frame}
@@ -218,7 +218,7 @@ Processes constituting background of our analysis:
 \begin{frame}
 \frametitle{Distribution of invariant masses of the reconstructed Z-boson candidates}
 
-The histograms contains peeks for events with energy close to $90 [GeV]$.
+The histograms contains peeks for events with energy close to $90$ GeV.
 
 \begin{figure} [H]
 \centering
@@ -233,7 +233,7 @@ The histograms contains peeks for events with energy close to $90 [GeV]$.
 \begin{frame}
 \frametitle{Four-lepton mass distribution of selected events}
 
-On both histogram we can observe two peeks, one with $m_{4l} = 90 [GeV]$ and other, the Higgs boson candidate with $m_{4l} = 125 [GeV]$.
+On both histogram we can observe two peeks, one with $m_{4l} = 90 $ GeV and other, the Higgs boson candidate with $m_{4l} = 125 $ GeV.
 
 \begin{figure} [H]
 \centering
@@ -275,6 +275,19 @@ On both histogram we can observe two peeks, one with $m_{4l} = 90 [GeV]$ and oth
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Cross-section measurement}
 
+%% C-factor calculations
+\begin{frame}
+In our analysis, there were \textbf{four} correction factors:
+\begin{eqnarray}
+C_1=C_{4\mu}=0.64 \pm 0.04 \nonumber \\
+C_2=C_{2e2\mu}=0.55 \pm 0.03 \nonumber \\
+C_3=C_{2\mu2e}=0.48 \pm 0.05 \nonumber \\
+C_4=C_{4e}=0.43 \pm 0.06 \nonumber \\
+\end{eqnarray}
+\vspace{1cm}
+We took a "simplified approach" and used $C=\frac{1}{4}\sum_{i=1}^{4} C_i=\textbf{0.53}$
+\end{frame}
+
 %%% Cross-section measurement calc
 \begin{frame}
 \frametitle{Cross-section measurement}
@@ -292,7 +305,7 @@ where:
 \end{description}
 \vspace{1cm}
 \begin{equation}
-\sigma^{\hzz}=\frac{321-315}{0.525\cdot 10.06}=\frac{6}{0.525\cdot 10.06}=1,136 \: [\mathrm{fb}]
+\sigma^{\hzz}=\frac{321-315}{0.525\cdot 10.06}=\frac{6}{0.525\cdot 10.06}=1.14 \: [\mathrm{fb}]
 \end{equation}
 
 \end{frame}
@@ -331,20 +344,45 @@ The cross-section measurement was repeated with correction on leptons' traverse 
 Case 1: The systematic uncertainties were added to the leptons' traverse momentums.
 \textbf{Four} events were observed.
 \begin{equation}
-\delta_{syst, 1} = \sigma^{\hzz} - \sigma^1 = | 1,136 - 0.757 | = 0.379 \: [\mathrm{fb}]
+\delta_{syst, 1} = \sigma^{\hzz} - \sigma^1 = | 1.136 - 0.757 | = 0.379 \: [\mathrm{fb}]
 \end{equation}
 
 Case 2: The systematic uncertainties were subracted from the leptons' traverse momentums.
 \textbf{Eleven} events were observed.
 \begin{equation}
-\delta_{syst, 2} = \sigma^{\hzz} - \sigma^2 = | 1,136 - 2.083 | = 0.946 \: [\mathrm{fb}]
+\delta_{syst, 2} = \sigma^{\hzz} - \sigma^2 = | 1.136 - 2.083 | = 0.946 \: [\mathrm{fb}]
 \end{equation}
 
 As the final systematic uncertainty of the cross section measurement maximum value of $\delta_{syst, 1}, \delta_{syst, 2}$ was taken.
 
 \begin{equation}
-\delta_{syst} = 0.946 \: [\mathrm{fb}]
+\delta_{syst_A} = 0.946 \: [\mathrm{fb}]
 \end{equation}
+
+\end{frame}
+
+%%% Statistical, systematic and luminosity uncertainties of cs
+\begin{frame}
+\frametitle{Statistical, systematic and luminosity uncertainties of cross-section}
+Error propagation rule was used in cross-section's uncertainty calculations:
+\begin{equation}
+\delta_{\sigma}=\sqrt{\sum_i\qty(\grande \pdv{\sigma}{x_i}\cdot \delta_{x_i} )^2} = \sqrt{\qty(\grande \frac{1}{C\cdot L_{int}}\cdot \delta_{N_{data}})^2 + \qty(\grande \frac{-N_{obs}}{C\cdot L_{int}^2}\cdot \delta_{L_{int}})^2 + \qty(\grande \frac{-N_{obs}}{C^2\cdot L_{int}}\cdot \delta_{C})^2 } ,
+\end{equation}
+where:
+\begin{description}
+\item[$\delta_{N_{data}}$] = $\sqrt{N_{data}}=17.92$,
+\item[$\delta_{L_{int}}$] = $0.37 \: \mathrm{fb}^{-1}$,
+\item[$\delta_C$] = $\max(\abs{C_i-C})=0.12, \; i=1, 2, 3, 4$.
+\end{description}
+\vspace{1cm}
+Based on the formula above, all required uncertainties were calculated:
+\begin{eqnarray}
+    \delta_{stat}=3.40 \nonumber \\
+    \delta_{syst}=\sqrt{\delta_{syst_A}^2 +\delta_{syst_A}^2}=0.98 \nonumber \\
+    \delta_{lumi}=0.05 \nonumber
+\end{eqnarray}
+\vspace{1cm}
+Eventually, cross-section value can be expressed as: $\sigma^{\hzz, \: \mathrm{nom}}=\textbf{1.14} \: \pm 3.4 \: \mathrm{(stat)} \: \pm 0.98 \: \mathrm{(syst)} \: \pm 0.05 \: \mathrm{(lumi) \: fb}$
 
 \end{frame}
 
