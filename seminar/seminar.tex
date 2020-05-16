@@ -10,6 +10,7 @@
 \usepackage[utf8x]{inputenc}
 \usepackage{physics}
 \usepackage{eqnarray}
+\usepackage{wasysym}
 
 \newcommand{\hzz}{ H\rightarrow ZZ^{*}\rightarrow 4 \ell}
 
@@ -50,8 +51,9 @@
 
 \begin{figure} [H]
 \centering
-\includegraphics[width=3cm]{zdj1.png}
-\includegraphics[width=3cm]{zdj2.png}
+\includegraphics[width=3cm]{zdj1.png} \quad \quad
+\includegraphics[width=4.5cm]{zdj2.png}
+\caption{ That's Aleksandra P and Aleksandra K!}
 \end{figure}
 
 \end{frame}
@@ -277,6 +279,7 @@ On both histogram we can observe two peeks, one with $m_{4l} = 90 $ GeV and othe
 
 %% C-factor calculations
 \begin{frame}
+\frametitle{C-factor}
 In our analysis, there were \textbf{four} correction factors:
 \begin{eqnarray}
 C_1=C_{4\mu}=0.64 \pm 0.04 \nonumber \\
@@ -366,7 +369,10 @@ As the final systematic uncertainty of the cross section measurement maximum val
 \frametitle{Statistical, systematic and luminosity uncertainties of cross-section}
 Error propagation rule was used in cross-section's uncertainty calculations:
 \begin{equation}
-\delta_{\sigma}=\sqrt{\sum_i\qty(\grande \pdv{\sigma}{x_i}\cdot \delta_{x_i} )^2} = \sqrt{\qty(\grande \frac{1}{C\cdot L_{int}}\cdot \delta_{N_{data}})^2 + \qty(\grande \frac{-N_{obs}}{C\cdot L_{int}^2}\cdot \delta_{L_{int}})^2 + \qty(\grande \frac{-N_{obs}}{C^2\cdot L_{int}}\cdot \delta_{C})^2 } ,
+\begin{gathered}
+\delta_{\sigma}= \sqrt{\sum_i \qty ( \pdv{\sigma}{x_i}\cdot \delta_{x_i} )^2} \\
+= \sqrt{\qty( \frac{1}{C\cdot L_{int}}\cdot \delta_{N_{data}})^2 + \qty( \frac{-N_{obs}}{C\cdot L_{int}^2}\cdot \delta_{L_{int}})^2 + \qty( \frac{-N_{obs}}{C^2\cdot L_{int}}\cdot \delta_{C})^2 } ,
+\end{gathered}
 \end{equation}
 where:
 \begin{description}
@@ -375,15 +381,23 @@ where:
 \item[$\delta_C$] = $\max(\abs{C_i-C})=0.12, \; i=1, 2, 3, 4$.
 \end{description}
 \vspace{1cm}
+
+\end{frame}
+\begin{frame}
+\frametitle{Statistical, systematic and luminosity uncertainties of cross-section}
 Based on the formula above, all required uncertainties were calculated:
 \begin{eqnarray}
     \delta_{stat}=3.40 \nonumber \\
     \delta_{syst}=\sqrt{\delta_{syst_A}^2 +\delta_{syst_A}^2}=0.98 \nonumber \\
     \delta_{lumi}=0.05 \nonumber
 \end{eqnarray}
-\vspace{1cm}
-Eventually, cross-section value can be expressed as: $\sigma^{\hzz, \: \mathrm{nom}}=\textbf{1.14} \: \pm 3.4 \: \mathrm{(stat)} \: \pm 0.98 \: \mathrm{(syst)} \: \pm 0.05 \: \mathrm{(lumi) \: fb}$
 
+Eventually, cross-section value can be expressed as: 
+\begin{equation}
+\sigma^{\hzz, \: \mathrm{nom}}=\textbf{1.14} \: \pm 3.4 \: \mathrm{(stat)} \: \pm 0.98 \: \mathrm{(syst)} \: \pm 0.05 \: \mathrm{(lumi) \: fb}
+\end{equation}
+
+Due to very high value of uncertainties we cannot claim the Higgs boson discovery \frownie .
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%
