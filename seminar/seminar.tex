@@ -37,12 +37,23 @@
 \author[Aleksandra Poreba, Aleksandra Kukielka]{Aleksandra Poreba, Aleksandra Kukielka}
 \date{}
 
-	\title[The $H \rightarrow ZZ^{*}$ decay analysis]{The case of Higgs boson production in $H \rightarrow ZZ^{*}$ decay}
-	\subtitle{Introduction to the Particle Physics Data Analysis}
+\title[The $H \rightarrow ZZ^{*}$ decay analysis]{The case of Higgs boson production in $H \rightarrow ZZ^{*}$ decay}
+\subtitle{Introduction to the Particle Physics Data Analysis}
 
 %%%%%%%%%%%%%%%%%
 \begin{document}
 \maketitle
+
+\begin{frame}
+\frametitle{That's us!}
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=3cm]{zdj1.png}
+%\includegraphics[width=3cm]{zdj2.png}
+\end{figure}
+
+\end{frame}
 
 %%%%%%%%%%%%%%%%
 \begin{frame}{Outline}
@@ -86,7 +97,7 @@ The final event-selection criteria for $ZZ^*$ production:
 \item single-electron or single-muon trigger satisfied,
 \item exactly four leptons (electrons or muons) with $p_T>25, 15, 10, 7 GeV$, respectively,
 \item Higgs-boson candidates are formed by selecting two $SFOS$ lepton pairs,
-\item the leading pair is defined as the $SFOS$ \footnote{$SFOS$ - Same Flavour, Opposite Charge} pair with the mass $m_{\ell \ell, 1}$ closest to the $Z$ boson mass $m_Z$, and the subleading pair is defined as the SFOS pair with the mass $m_{\ell \ell, 1}$ second closest to $m_Z$. \cite{opendata}
+\item the leading pair is defined as the $SFOS$ \footnote{$SFOS$ - Same Flavour, Opposite Charge} pair with the mass $m_{\ell \ell, 1}$ closest to the $Z$ boson mass $m_Z$, and the subleading pair is defined as the SFOS pair with the mass $m_{\ell \ell, 1}$ second closest to $m_Z$ \cite{opendata}.
 
 \end{itemize}
 
@@ -95,11 +106,25 @@ The final event-selection criteria for $ZZ^*$ production:
 \begin{frame}
 \frametitle{Cutflow Histogram}
 
-\begin{figure} [H]
-\centering
-\includegraphics[width=6cm]{hist_cutflow.png}
-\caption{The cutflow histogram: $S1$ - single-electron or single-muon trigger satisfied, $S2$ - four leptons with $p_T>25, 15, 10, 7 GeV$, $S3$ - two SFOS lepton pairs. }
-\end{figure}
+\begin{tabular}{cl}  
+         \begin{tabular}{c}
+	%\begin{figure}
+           \includegraphics[width=6cm]{hist_cutflow.png}
+	%\caption{The cutflow histogram.}
+	%\end{figure}
+           \end{tabular}
+           & \begin{tabular}{l}
+             \parbox{0.5\linewidth}{%  change the parbox width as appropiate
+		On the cutflow histogram we can observe number of events after each selection criteria:
+		\begin{itemize}
+		\item $S1$ - single-electron or single-muon trigger satisfied, 
+		\item $S2$ - four leptons with $p_T>25, 15, 10, 7 GeV$, 
+		\item $S3$ - two SFOS lepton pairs.
+		\end{itemize}
+
+    }
+         \end{tabular}  \\
+\end{tabular}
 
 \end{frame}
 
@@ -140,19 +165,117 @@ Processes constituting background of our analysis:
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Control plots}
 
+%%% Number of leptons
 \begin{frame}
 \frametitle{Number of Leptons}
 
+\begin{tabular}{cl}  
+         \begin{tabular}{c}
+           \includegraphics[width=6cm]{hist_n_leptons.png}
+           \end{tabular}
+           & \begin{tabular}{l}
+             \parbox{0.5\linewidth}{%  change the parbox width as appropiate
+	This histogram contains the number of leptons after all selection criteria.
+             We can observe four leptons.
+    }
+         \end{tabular}  \\
+\end{tabular}
+
+\end{frame}
+
+
+%%% charge
+\begin{frame}
+\frametitle{Charge of selected leptons}
+
+\begin{tabular}{cl}  
+         \begin{tabular}{c}
+           \includegraphics[width=6cm]{hist_fourleptch.png}
+           \end{tabular}
+           & \begin{tabular}{l}
+             \parbox{0.5\linewidth}{%  change the parbox width as appropiate
+		On the histogram we can observe agreement with the selection criteria. The same amount of leptions of opposite charges was selected.
+    }
+         \end{tabular}  \\
+\end{tabular}
+
+\end{frame}
+
+%%% pseudorapidity, azimuthal angle, 
+\begin{frame}
+\frametitle{Pseudorapidity and azimuthal angle of selected leptons}
+
 \begin{figure} [H]
 \centering
-\includegraphics[width=6cm]{hist_n_leptons.png}
-\caption{The histogram with number of leptons. }
+\includegraphics[width=0.4\textwidth]{hist_fourlepteta.png}
+\includegraphics[width=0.4\textwidth]{hist_fourleptphi.png}
+\caption{Pseudorapidity (on the left) and azimuthal angle (on the right) of selected leptons. }
 \end{figure}
 
 \end{frame}
 
+%%% Mass of Z-boson candidates
+\begin{frame}
+\frametitle{Distribution of invariant masses of the reconstructed Z-boson candidates}
+
+The histograms contains peeks for events with energy close to $90 [GeV]$.
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=0.4\textwidth]{hist_mLL1.png}
+\includegraphics[width=0.4\textwidth]{hist_mLL2.png}
+\caption{Distribution of invariant masses of leading and subleading SFOS pair. }
+\end{figure}
+
+\end{frame}
+
+%%% 4 lepton mass
+\begin{frame}
+\frametitle{Four-lepton mass distribution of selected events}
+
+On both histogram we can observe two peeks, one with $m_{4l} = 90 [GeV]$ and other, the Higgs boson candidate with $m_{4l} = 125 [GeV]$.
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=0.4\textwidth]{mass_four_lep.png}
+\includegraphics[width=0.4\textwidth]{mass_four_lep_pub.png}
+\caption{ Distribution of four-lepton mass extreacted from our analysis (on the left) and the ATLAS publication (on the right) \cite{hzz}. The ATLAS' histogram is corrected for final-state radiation.}
+\end{figure}
+
+\end{frame}
+
+%%% traverse momentum - comparison
+\begin{frame}
+\frametitle{Traverse momentum of the four leptons}
+
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=0.4\textwidth]{hist_fourlepsys_pt.png}
+\includegraphics[width=0.4\textwidth]{hist_fourlepsys_pt_pub.png}
+\caption{ Distribution of traverse momentum for selected events extracted from out analysis (left) and the ATLAS publication (right) \cite{hzz}. The background ZZ contribution in right histogram is much smaller.}
+\end{figure}
+
+\end{frame}
+
+%%% jet multiplicity - comparison
+\begin{frame}
+\frametitle{Jet multiplicity}
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=0.4\textwidth]{hist_n_jets.png}
+\includegraphics[width=0.4\textwidth]{hist_n_jets_pub.png}
+\caption{ Jet multiplicity in selected events extracted from out analysis (left) and the ATLAS publication (right) \cite{hzz}. The background ZZ contribution in right histogram is much smaller.}
+\end{figure}
+
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%
 \section{Cross-section measurement}
+
+%%% Cross-section measurement calc
 \begin{frame}
 \frametitle{Cross-section measurement}
 Cross-section of $\hzz$ was calculated using the following formula:
@@ -174,8 +297,21 @@ where:
 
 \end{frame}
 
+%%% Systematic uncertainties for data
 \begin{frame}
-\frametitle{Systematic uncertainties}
+\frametitle{Systematic uncertainties for data}
+
+\begin{figure} [H]
+\centering
+\includegraphics[width=0.5\textwidth]{syst1_data.png}
+\caption{The histogram shows a size of correction in percentages for the data in the analysis. }
+\end{figure}
+
+\end{frame}
+
+%%% Systematic uncertainties for signal
+\begin{frame}
+\frametitle{Systematic uncertainties for signal}
 
 \begin{figure} [H]
 \centering
@@ -186,6 +322,7 @@ where:
 
 \end{frame}
 
+%%% Systematic uncertainties calc
 \begin{frame}
 \frametitle{Systematic uncertainties}
 The cross-section measurement was repeated with correction on leptons' traverse momentums.\\
@@ -218,7 +355,7 @@ As the final systematic uncertainty of the cross section measurement maximum val
 \section{Bibliography}
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[allowframebreaks]{Bibliography}
-	\begin{thebibliography}{9}
+\begin{thebibliography}{9}
 		\setbeamertemplate{bibliography item}[article]
 		\bibitem{opendata}
 			{The ATLAS collaboration\newblock Review of the 13 TeV ATLAS Open Data release \newblock \url{https://cds.cern.ch/record/2707171}}
@@ -226,6 +363,6 @@ As the final systematic uncertainty of the cross section measurement maximum val
 			{Aaboud, Morad and others \newblock Measurement of inclusive and differential cross sections in the $ \hzz $ decay channel in pp collisions at $s√ = 13 TeV$ with the ATLAS detector \newblock \url{http://dx.doi.org/10.1007/JHEP10(2017)132}}
 		\bibitem{diagram}
 			{Passon, Oliver \newblock On the interpretation of Feynman diagrams, or, did the LHC experiments observe the Higgs to gamma gamma decay?}
-	\end{thebibliography}
+\end{thebibliography}
 \end{frame}
 \end{document}
